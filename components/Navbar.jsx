@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Link from 'next/link';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -11,11 +11,18 @@ const Navbar = () => {
       <img className='w-20 mx-auto mt-2' src="/immaculada.png" alt="/" />
       <h1 className='w-full text-xl font-bold text-[#fbbf24]'>IMMACULADA CONCEPTION COLLEGE </h1>
       <ul className='hidden md:flex'>
-        <button className='p-4 hover:bg-[#26199e] rounded'>Home</button>
+        <Link href='/'>
+        <button className='p-4 hover:bg-primary rounded'>Home</button>
+        </Link>
         <button className='p-4 hover:bg-[#26199e] rounded'>News</button>
         <button className='p-4 hover:bg-[#26199e] rounded'>Events</button>
         <button className='p-4 hover:bg-[#26199e] rounded'>Admissions</button>
-        <button className='p-4 hover:bg-[#26199e] rounded'>Affiliates</button>
+        
+<Link href='/affliates'>
+<button className='p-4 hover:bg-[#26199e] rounded'>Affiliates</button>
+</Link>
+        
+
         <button className='p-4 hover:bg-[#26199e] rounded'>Organization</button>
         <button className='p-4 hover:bg-[#26199e] rounded'>Contact</button>
       </ul>
